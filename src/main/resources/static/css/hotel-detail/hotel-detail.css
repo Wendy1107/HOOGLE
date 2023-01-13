@@ -1,0 +1,42 @@
+/* 飯店簡介 地址下方的綠色線 */
+.green-line {
+    position: absolute;
+    width: 100% !important;
+    content: "";
+    border-bottom: 2px dotted #31b675;
+    left: 0px;
+    bottom: 0px;
+}
+
+/* 房型介紹 +號與-號的button */
+.plus-button {
+    background-color: #31b675;
+    color: #fff;
+    padding: 4px 8px;
+    font-size: 10px;
+    border: 2px solid #31b675;
+    display: inline-block;
+    font-weight: 500;
+}
+
+.minus-button {
+    background-color: #dc4545;
+    color: #fff;
+    padding: 4px 8px;
+    font-size: 10px;
+    border: 2px solid #dc4545;
+    display: inline-block;
+    font-weight: 800;
+}
+
+/* 房型介紹： 直接下訂的button */
+
+.check-order {
+    background-color: #080808;
+    color: #fff;
+    padding: 8px 16px;
+    font-size: 16px;
+    border: 1px solid #31b675;
+    display: inline-block;
+    font-weight: 600;
+}

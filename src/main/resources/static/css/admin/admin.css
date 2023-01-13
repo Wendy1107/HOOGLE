@@ -1,0 +1,490 @@
+/*===== 谷歌字体 =====*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+:root{
+    --nav-width:92px;
+
+    /* 自定义颜色 */
+    --first-color:#2e445b;
+    --bg-color:#0e3154;
+    --sub-color:#7fbffa;
+    --sec-color: #bcdbf8;
+    --thir-color:#d7dee7;
+    --white-color:#ffffff;
+
+    /* 规定一下字体 */
+    --body-font:'Poppins',sans-serif;
+    --normal-font-size:rem;
+    --smal-font-size:0.875rem;
+
+    /* 设置一下z-index级别 */
+    --z-fixed: 100;
+}
+
+*,::before,::after{
+    box-sizing: border-box;
+}
+body{
+  position: relative;
+  margin: 0 0 100px 0;
+  padding: 0 0 0 5.75rem;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  transition: .5s;
+}
+h1{
+  margin: 0;
+}
+ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+
+.l-navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--nav-width);
+    /* 100%的窗口高度 */
+    height: 100vh;
+    background-color: var(--bg-color);
+    color: var(--white-color);
+    padding: 1rem 2rem 1rem 1rem;
+    /* padding: 1.5rem 1,5rem 2rem; */
+    transition: 0.5s;
+    z-index: var(--z-fixed);
+}
+
+.nav{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* 溢出隐藏 */
+    overflow: hidden;
+    /* overflow-y: auto; /*自動產生卷軸*/
+} 
+
+.nav_brand{
+    display: grid;
+    grid-template-columns: max-content max-content;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.nav_ch{
+    font-size: 18px;
+    color: var(--white-color);
+    font-weight: 600;
+    vertical-align: middle;
+}
+
+.nav_toggle{
+    font-size: 1.25rem;
+    padding: 0.75rem;
+    /* 鼠标放上变小手 */
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.nav_logo{
+    color: var(--white-color);
+    font-weight: 600;
+}
+
+.nav_link{
+    display: grid;
+    grid-template-columns: max-content max-content;
+    align-items: center;
+    column-gap: 0.75rem; /*別亂動*/
+    padding: 0.75rem; /*別亂動*/
+    color: var(--white-color);
+    border-radius: .5rem;
+    margin-bottom: 0.3rem;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.nav_link:hover{
+    background-color: var(--first-color);
+}
+
+.nav_icon{
+    font-size: 1.25rem;
+}
+
+.nav_name{
+    font-size: var(--smal-font-size)
+}
+
+.expander{
+    width: calc(var(--nav-width) + 9.25rem);  /* 92px + 9.25rem*16px = 240px */
+}
+
+.body-pd{
+    padding: 0 0 0 15rem; /* 15rem*16px=240px */
+}
+
+.active{
+    background-color: var(--first-color);
+}
+
+.collapse{
+    /* grid-template-columns: 20px max-content 1rf; */
+    grid-template-columns: 20px max-content 1fr;
+
+}
+
+.collapse__link{
+    justify-self: flex-end;
+    transition: .5s;
+}
+
+.collapse_menu{
+    display: none;
+    padding: .3rem 2.25rem;
+}
+
+.collapse__sublink{
+    color: var(--sub-color);
+    font-size: var(--smal-font-size);
+}
+
+.collapse__sublink:hover{
+    color: var(--white-color);
+}
+
+.showCollapse{
+    display: block;
+}
+
+.rotate{
+    transform: rotate(180deg);
+}
+
+/* 照片和span的文字都用vertical-align: middle，讓文字垂直置中*/
+.pic{
+    width: 22px; 
+    height: 22px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.aaa{
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+  .text_h1{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--sub-color);
+  }
+  
+  /*========= header =========*/
+  
+  .func_list{
+    height: 80px;
+    position: relative;
+/*     top: 0; */
+    border-bottom: 1.7px solid var(--first-color);
+/*     padding-bottom: 10px; */
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;  
+  }
+  
+  div.test_radius{
+    /* 此設定作為上下左右置中的依據 */
+    display: flex;
+/*     左右置中 */
+    justify-content: center;
+/*     上下置中 */
+    align-items: center;
+    width: 200px;
+    height: 36px;
+    /* border:3px solid var(--first-color); */
+    color: var(--white-color);
+    font-weight: 700; 
+    font-size: 16px;
+    background-color: var(--bg-color);
+    /* border: solid 2px var(--sub-color); */
+    border-radius: 14px; /* 左上、右上、右下、左下，四個角，都會變成 10px 的圓角 */
+    margin: 0 0 0 40px;
+  }
+  
+ 
+  a.logout_link{
+    font-size: 12px;
+    color: var(--first-color);
+    background-color: var(--thir-color);
+    position: absolute;
+    right: 40px;
+    width: 77px;
+    height: 34px;
+    padding: 0.3rem;
+    grid-template-columns: max-content max-content;
+    display: flex;
+    align-items: center;
+    column-gap: 0.75rem;
+    border-radius: .6rem;
+/*     margin-bottom: 0.5rem; */
+    transition: .3s;
+    cursor: pointer;
+  }
+  .logout_icon{
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+  }
+
+/*   .notification_icon{ */
+/*     color: var(--first-color); */
+/*     background-color: var(--thir-color); */
+/*     position: absolute; */
+/*     right: 100px; */
+/*     width: 20px; */
+/*     height: 20px; */
+/*     padding: 0.3rem; */
+/*     grid-template-columns: max-content max-content; */
+/*     align-items: center; */
+/*     column-gap: 0.75rem; */
+/*     border-radius: 1rem; */
+/*     margin-bottom: 0.5rem; */
+/*     transition: .3s; */
+/*     cursor: pointer; */
+/*   } */
+  /*
+  .person_icon{
+    color: var(--first-color);
+    background-color: var(--thir-color);
+    position: absolute;
+    top: 20px;
+    right: 110px;
+    width: 20px;
+    height: 20px;
+    padding: 0.3rem;
+    grid-template-columns: max-content max-content;
+    align-items: center;
+    column-gap: 0.75rem;
+    border-radius: 1rem;
+    margin: 0.5rem;
+    transition: .3s;
+    cursor: pointer;
+  }
+  */
+
+  .logout_link:hover{
+    color: var(--white-color);
+    background-color: var(--first-color);
+    transform: scale(1.1);
+  }
+
+/*   .notification_icon:hover{ */
+/*     color: var(--white-color); */
+/*     background-color: var(--first-color); */
+/*   } */
+
+  /* .person_icon:hover{
+    color: var(--white-color);
+    background-color: var(--first-color);
+  } */
+
+  .logining{
+    position: relative;
+    left: 40px;
+    font-size: small;
+    margin-left: 7px;
+  }
+  
+  div.login_mark{
+	background-color: #d9ebfb;
+    font-size: 12px;
+    width: 200px;
+    height: 30px;
+    position: absolute;
+    right: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+       
+  }
+
+
+
+
+  /*============ 查詢飯店 ===============*/
+ 
+  .div_table{
+    /* position: relative;
+    border: 1px solid red;
+    padding: 0;
+    left: 92px;
+    width: calc(100% - 240px);
+    height: auto; */
+    width: 100%;
+    display: flex;
+    /* 左右置中 */
+    justify-content: center; 
+    /* 上下置中 */
+    align-items: center;
+  }
+
+  table{
+    font-size: 14px;
+    border-collapse:collapse;
+/*     display: flex; */
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+/*     width: 75%; */
+    width: 900px;
+    table-layout: fixed;
+    word-break:break-all;
+    color: black;
+   
+  }
+
+  table a{
+    color: #5361f6;
+  }
+
+  td, th{
+    border: solid 1.5px var(--white-color);
+    padding: 10px;
+/*     width: 10%; */
+    height: 45px;
+    vertical-align: middle;
+  }
+
+  .td_head{
+    background-color: var(--sec-color);
+  }
+
+  .td_body{
+    background-color: var(--thir-color);
+  }
+
+/*============ 管理者修改 ===============*/
+.features{
+  /* border: solid 1px var(--bg-color); */
+  width: 100%;
+  display: flex;
+  /* 左右置中 */
+  justify-content: center; 
+  /* 上下置中 */
+  align-items: center;
+}
+
+.features_search{
+  border: solid 1px var(--bg-color);
+  background-color: #fa9797;
+  height: 40px;
+  width: 900px;
+  display: flex;
+  align-items: center;
+
+}
+
+.searchbyid{
+  width: auto;
+  /* font-size: 14px; */
+  color: var(--bg-color);
+  display: inline-block;
+  border-right: solid 1.5px var(--bg-color);
+  /* background-color: var(--white-color); */
+  position: relative;
+  left: 10px;
+}
+
+.count_register_hotel{
+  width: auto;
+  /* font-size: 14px; */
+  color: var(--bg-color);
+  display: inline-block;
+  border: solid 1.2px var(--bg-color);
+  /* background-color: var(--white-color); */
+  position: relative;
+  left: 10px;
+}
+.link_hotel_list{
+  position: relative;
+  left: 630px;
+  color: #4221de;
+  border-bottom: solid 1.2px #4221de;
+}
+
+.link_user_list{
+  position: relative;
+  left: 570px;
+  color: #4221de;
+  border-bottom: solid 1.2px #4221de;
+}
+
+.link_news_list{
+  position: relative;
+  left: 510px;
+  color: #4221de;
+  border-bottom: solid 1.2px #4221de;
+}
+
+.csearchbyid{
+	margin-right: 10px;
+}
+
+a.admin_create{
+  width: 100px;
+  font-size: 14px;
+  /* color: var(--color-color); */
+  border-left: solid 1.5px var(--bg-color);
+  /* background-color: var(--white-color); */
+  position: relative;
+  left: calc(900px - 280px - 100px - 10px);
+  display: flex;
+  /* 左右置中 */
+  justify-content: center; 
+      
+}
+a.news_create{
+  width: 100px;
+  font-size: 14px;
+  /* color: var(--color-color); */
+  border-left: solid 1.5px var(--bg-color);
+  /* background-color: var(--white-color); */
+  position: relative;
+  left: 280px;
+  display: flex;
+  /* 左右置中 */
+  justify-content: center; 
+      
+}
+
+.input_update, .input_add{
+	position: absolute;
+	right: 150px;
+}
+
+
+/*============ 登出Alert ===============*/
+div.logout_alert{
+	position: relative;
+	left: calc(100% / 3);
+	top: 150px;
+	width: 200px;
+	height: 100px;
+	border: solid 1px var(--bg-color);
+	background-color: var(--thir-color);
+	border-radius: 14px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

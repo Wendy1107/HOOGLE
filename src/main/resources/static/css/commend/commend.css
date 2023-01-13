@@ -1,0 +1,40 @@
+body {
+    height: 800px;
+    width: 600;
+    background-color: lightgray;
+  }
+  div.header-up-bar {
+    font-size: 40px;
+    background-color: lightcoral;
+  }
+  textarea#commendContent {
+    width: 660px;
+    height: 260px;
+    font-size: 20px;
+  }
+  div.dateandsubmit {
+    height: 50px;
+  }
+  input#date{
+    height: 50px;
+    width: 150px;
+    font-size: 20px;
+  }
+  input#submit{
+    height: 50px;
+    font-size: 20px;
+    border-radius: 6px;
+    float:unset;
+    background-color: lightcoral;
+  }
+  input.ordId{
+  font-size: 20px;
+  }
+  input#update{
+    height: 50px;
+    font-size: 20px;
+    border-radius: 6px;
+    float:unset;
+    background-color: lightcoral;
+  }
+  
